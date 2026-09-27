@@ -1,0 +1,15 @@
+{
+  "name": "sunmist-fruit-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sunmist Fruit — U-Pick orange farm website with 3D animations and English/Chinese translation",
+  "scripts": {
+    "build": "esbuild src/scene.js --bundle --minify --format=iife --target=es2019 --legal-comments=none --outfile=assets/js/scene.js",
+    "dev": "npm run build -- --watch",
+    "serve": "npx --yes serve . -l 5173"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "three": "0.186.1"
+  }
+}
