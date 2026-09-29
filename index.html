@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sunmist Fruit — U-Pick Tangerines &amp; Meyer Lemons in Temecula</title>
-  <meta name="description" content="Pick your own Tango tangerines, Meyer lemons, blueberries and avocados at Sunmist Fruit, a family orchard in the De Luz hills of Temecula, California. Open weekends 10am–2pm.">
+  <title>Sunmist Fruit — U-Pick Tangerines, Meyer Lemons &amp; Weddings in Temecula</title>
+  <meta name="description" content="Pick your own Tango tangerines, Meyer lemons, blueberries and avocados, order fresh fruit online, or celebrate your wedding at Sunmist Fruit in Temecula, California.">
   <meta name="theme-color" content="#ff7417">
-  <meta property="og:title" content="Sunmist Fruit — U-Pick Orchard in Temecula">
-  <meta property="og:description" content="Pick sunshine straight from the tree. U-Pick every weekend, April – October.">
+  <meta property="og:title" content="Sunmist Fruit — U-Pick Tangerines, Meyer Lemons &amp; Weddings in Temecula">
+  <meta property="og:description" content="Pick your own Tango tangerines, Meyer lemons, blueberries and avocados, order fresh fruit online, or celebrate your wedding at Sunmist Fruit in Temecula, California.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="alternate" hreflang="en" href="?lang=en">
-  <link rel="alternate" hreflang="zh-Hans" href="?lang=zh">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -28,73 +26,31 @@
     })();
   </script>
 </head>
-<body>
-
-<!-- ============================================================ PRELOADER -->
+<body data-page="home" data-scene="home" data-title-zh="Sunmist 果园 — Temecula 自助采摘、水果商店与婚礼场地" data-desc-zh="在加州 Temecula 的 Sunmist 果园亲手采摘 Tango 蜜橘、梅尔柠檬、蓝莓和牛油果，在线订购新鲜水果，或在果园里举办婚礼。">
+<!-- Generated from a shared template: header, menu, footer and cart come from assets/js/layout.js -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader__inner">
-    <svg class="loader__peel" viewBox="0 0 120 120">
-      <circle cx="60" cy="60" r="52" class="loader__track"/>
-      <circle cx="60" cy="60" r="52" class="loader__bar" id="loaderBar"/>
-    </svg>
+    <svg class="loader__peel" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="loader__track"/><circle cx="60" cy="60" r="52" class="loader__bar" id="loaderBar"/></svg>
     <div class="loader__count"><span id="loaderCount">0</span></div>
     <p class="loader__word" data-i18n="loader">Ripening…</p>
   </div>
 </div>
-
 <canvas id="orchard" class="orchard" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
-
-<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label" data-i18n="cursor.pick">Pick</span></div></div>
-
-<!-- ============================================================ HEADER -->
-<header class="nav" id="nav">
-  <a href="#top" class="nav__logo" aria-label="Sunmist Fruit">
-    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="15" fill="#ff7417"/><circle cx="15" cy="17" r="4" fill="#ffb25a" opacity=".7"/><path d="M20 8c2-5 8-7 13-5-2 5-7 7-13 5z" fill="#2f6b2a"/><path d="M20 7.5v3" stroke="#2f6b2a" stroke-width="2" stroke-linecap="round"/></svg>
-    <span>Sunmist<em>Fruit</em></span>
-  </a>
-  <nav class="nav__links" aria-label="Main">
-    <a href="#upick" data-i18n="nav.upick">U-Pick</a>
-    <a href="#fruits" data-i18n="nav.fruits">Our Fruit</a>
-    <a href="#visit" data-i18n="nav.visit">Visit</a>
-    <a href="#stay" data-i18n="nav.stay">Farm Stay</a>
-    <a href="#weddings" data-i18n="nav.weddings">Weddings</a>
-    <a href="#wholesale" data-i18n="nav.wholesale">Wholesale</a>
-  </nav>
-  <div class="nav__actions">
-    <button class="lang" id="langToggle" type="button" aria-label="Switch language / 切换语言">
-      <span class="lang__opt" data-l="en">EN</span><span class="lang__sep">/</span><span class="lang__opt" data-l="zh">中文</span>
-    </button>
-    <a href="#book" class="btn btn--sm btn--orange" data-magnetic><span data-i18n="nav.book">Book U-Pick</span></a>
-    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
-  </div>
-</header>
-
-<div class="mmenu" id="mobileMenu" hidden>
-  <nav>
-    <a href="#upick" data-i18n="nav.upick">U-Pick</a>
-    <a href="#fruits" data-i18n="nav.fruits">Our Fruit</a>
-    <a href="#visit" data-i18n="nav.visit">Visit</a>
-    <a href="#stay" data-i18n="nav.stay">Farm Stay</a>
-    <a href="#weddings" data-i18n="nav.weddings">Weddings</a>
-    <a href="#wholesale" data-i18n="nav.wholesale">Wholesale</a>
-    <a href="#book" data-i18n="nav.book">Book U-Pick</a>
-  </nav>
-  <p class="mmenu__contact"><a href="tel:+16268987800">626-898-7800</a><br><a href="mailto:sales@sunmistfruit.com">sales@sunmistfruit.com</a></p>
-</div>
+<div id="site-header"></div>
 
 <main id="top">
-
 <!-- ============================================================ HERO -->
-<section class="hero" id="hero">
+<section class="hero" id="hero" data-3d>
   <div class="hero__fallback" aria-hidden="true"><div class="css-orange"></div></div>
   <div class="wrap hero__inner">
     <p class="eyebrow hero__eyebrow" data-hero><span class="dot"></span><span data-i18n="hero.eyebrow">Temecula, California · U-Pick every weekend</span></p>
-    <h1 class="hero__title" data-split data-i18n="hero.title">Pick sunshine<br>straight from <em>the tree.</em></h1>
-    <p class="hero__lead" data-hero data-i18n="hero.lead">Wander our groves of Tango tangerines and Meyer lemons in the hills of De Luz. Fill a bag, weigh it, and take the orchard home.</p>
+    <h1 class="hero__title" data-split data-intro data-i18n="hero.title">Pick sunshine<br>straight from <em>the tree.</em></h1>
+    <p class="hero__lead" data-hero data-i18n="hero.lead">The best Tango tangerines and Meyer lemons in California. Pick your own every weekend, order fresh fruit online, or celebrate your wedding among the trees.</p>
     <div class="hero__cta" data-hero>
-      <a href="#book" class="btn btn--orange btn--lg" data-magnetic><span data-i18n="hero.cta1">Book your visit</span><svg class="i"><use href="#i-arrow"/></svg></a>
-      <a href="#fruits" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="hero.cta2">Meet the fruit</span></a>
+      <a href="u-pick.html#book" class="btn btn--orange btn--lg" data-magnetic><span data-i18n="nav.book">Book U-Pick</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      <a href="shop.html" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="home.shopBtn">Shop fruit</span><svg class="i"><use href="#i-bag"/></svg></a>
+      <a href="weddings.html" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="nav.weddings">Weddings</span><svg class="i"><use href="#i-ring"/></svg></a>
     </div>
     <ul class="hero__chips" data-hero>
       <li><svg class="i"><use href="#i-clock"/></svg><span data-i18n="hero.chip1">Sat &amp; Sun · 10am – 2pm</span></li>
@@ -110,36 +66,35 @@
   </div>
 </section>
 
-<!-- ============================================================ MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee__track" id="marquee">
     <div class="marquee__row" data-i18n="marquee">
-      <span>Tango Tangerines</span><b>✺</b><span>Meyer Lemons</span><b>✺</b><span>Blueberries</span><b>✺</b><span>Avocados</span><b>✺</b><span>U-Pick every weekend</span><b>✺</b>
+      <span>Tango Tangerines</span><b>✺</b><span>Meyer Lemons</span><b>✺</b><span>Blueberries</span><b>✺</b><span>Avocados</span><b>✺</b><span>U-Pick every weekend</span><b>✺</b><span>Weddings &amp; events</span><b>✺</b>
     </div>
   </div>
 </div>
 
 <!-- ============================================================ STORY -->
-<section class="story" id="story">
+<section class="story" id="story" data-3d>
   <div class="wrap story__grid">
     <div class="story__spacer" aria-hidden="true"></div>
     <div class="story__copy">
       <p class="eyebrow"><span class="num">01</span><span data-i18n="story.eyebrow">Our grove</span></p>
       <h2 class="h2" data-split data-i18n="story.title">A family orchard, grown on <em>sun &amp; mist.</em></h2>
       <p class="lead" data-reveal data-i18n="story.p1">Tucked into a private valley in the De Luz hills, Sunmist Fruit is a working farm. Warm days and cool coastal mist give our citrus its signature sweetness — the same fruit we ship across California is waiting on the trees for you.</p>
-      <p data-reveal data-i18n="story.p2">Bring the kids, bring a picnic, and spend a slow morning between the rows. We hand you a bag and a picking pole; the orchard does the rest.</p>
       <div class="stats">
         <div class="stat" data-reveal><strong><span data-count="20000">20,000</span>+</strong><span data-i18n="story.s1">Meyer lemon trees</span></div>
         <div class="stat" data-reveal><strong><span data-count="5" data-count-zh="500">5</span><span data-i18n="unit.m">M</span></strong><span data-i18n="story.s2">lbs of lemons a year</span></div>
         <div class="stat" data-reveal><strong><span data-count="1" data-count-zh="100">1</span><span data-i18n="unit.m">M</span></strong><span data-i18n="story.s3">lbs of Tango tangerines a year</span></div>
-        <div class="stat" data-reveal><strong><span data-count="4">4</span></strong><span data-i18n="story.s4">fruits to pick yourself</span></div>
+        <div class="stat" data-reveal><strong><span data-count="100">100</span>+</strong><span data-i18n="story.s4b">acres across 4 farms</span></div>
       </div>
+      <a href="about.html" class="btn btn--ink" data-reveal data-magnetic><span data-i18n="home.aboutBtn">About us</span><svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 
 <!-- ============================================================ FRUITS (pinned 3D showcase) -->
-<section class="fruits" id="fruits">
+<section class="fruits" id="fruits" data-3d>
   <div class="fruits__pin">
     <div class="wrap fruits__grid">
       <div class="fruits__stage" aria-hidden="true">
@@ -149,55 +104,54 @@
       </div>
       <div class="fruits__panels">
         <p class="eyebrow"><span class="num">02</span><span data-i18n="fruits.eyebrow">What's growing</span></p>
-
         <article class="fruit is-active" data-fruit="0" data-bg="#ffe7c7">
           <p class="fruit__idx">01 / 04</p>
           <h3 class="fruit__name" data-i18n="f0.name">Tango Tangerines</h3>
           <p class="fruit__tag" data-i18n="f0.tag">Seedless. Easy to peel. Sweet as candy.</p>
           <p class="fruit__desc" data-i18n="f0.desc">Our signature crop — over a million pounds a year. Tango is a seedless mandarin bred in California: bright, juicy and so easy to peel that kids finish a bag before the car leaves the lot.</p>
           <dl class="fruit__meta">
+            <div><dt data-i18n="meta.shop">Order online</dt><dd data-i18n="f0.shop">From $12.50 · 5 lb</dd></div>
             <div><dt data-i18n="meta.price">U-Pick price</dt><dd data-i18n="f0.price">$2.50 / lb</dd></div>
-            <div><dt data-i18n="meta.where">Where</dt><dd data-i18n="f0.where">All across the grove</dd></div>
           </dl>
-          <button class="btn btn--ink btn--sm" type="button" data-details="0" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-plus"/></svg></button>
+          <div class="fruit__btns"><button class="btn btn--orange btn--sm" type="button" data-quick-add="tangerines" data-opt="5lb" data-magnetic><span data-i18n="meta.add">Add to cart</span><svg class="i"><use href="#i-bag"/></svg></button>
+          <a class="btn btn--ink btn--sm" href="product.html?id=tangerines" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-arrow"/></svg></a></div>
         </article>
-
         <article class="fruit" data-fruit="1" data-bg="#fff3b8">
           <p class="fruit__idx">02 / 04</p>
           <h3 class="fruit__name" data-i18n="f1.name">Meyer Lemons</h3>
           <p class="fruit__tag" data-i18n="f1.tag">The chef's lemon — floral, sweet, thin-skinned.</p>
           <p class="fruit__desc" data-i18n="f1.desc">A lemon crossed with a mandarin, Meyers are fragrant and far less sour than supermarket lemons. With more than 20,000 trees, you will never run out of lemonade.</p>
           <dl class="fruit__meta">
+            <div><dt data-i18n="meta.shop">Order online</dt><dd data-i18n="f1.shop">From $9 · 5 lb</dd></div>
             <div><dt data-i18n="meta.price">U-Pick price</dt><dd data-i18n="f1.price">$1.50 / lb</dd></div>
-            <div><dt data-i18n="meta.where">Where</dt><dd data-i18n="f1.where">Rows in front of the parking lot</dd></div>
           </dl>
-          <button class="btn btn--ink btn--sm" type="button" data-details="1" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-plus"/></svg></button>
+          <div class="fruit__btns"><button class="btn btn--orange btn--sm" type="button" data-quick-add="lemons" data-opt="5lb" data-magnetic><span data-i18n="meta.add">Add to cart</span><svg class="i"><use href="#i-bag"/></svg></button>
+          <a class="btn btn--ink btn--sm" href="product.html?id=lemons" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-arrow"/></svg></a></div>
         </article>
-
         <article class="fruit" data-fruit="2" data-bg="#e3e4f6">
           <p class="fruit__idx">03 / 04</p>
           <h3 class="fruit__name" data-i18n="f2.name">Blueberries</h3>
           <p class="fruit__tag" data-i18n="f2.tag">Sun-warm, straight off the bush.</p>
           <p class="fruit__desc" data-i18n="f2.desc">Rows of blueberry bushes line the far side of the grove. Look for berries that are dusty blue all over — ripe ones roll right off into your palm.</p>
           <dl class="fruit__meta">
+            <div><dt data-i18n="meta.shop">Order online</dt><dd data-i18n="f2.shop">From $8 · 1 lb</dd></div>
             <div><dt data-i18n="meta.price">U-Pick price</dt><dd data-i18n="f2.price">Seasonal — weighed at checkout</dd></div>
-            <div><dt data-i18n="meta.where">Where</dt><dd data-i18n="f2.where">Far side of the grove</dd></div>
           </dl>
-          <button class="btn btn--ink btn--sm" type="button" data-details="2" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-plus"/></svg></button>
+          <div class="fruit__btns"><button class="btn btn--orange btn--sm" type="button" data-quick-add="blueberries" data-opt="1lb" data-magnetic><span data-i18n="meta.add">Add to cart</span><svg class="i"><use href="#i-bag"/></svg></button>
+          <a class="btn btn--ink btn--sm" href="product.html?id=blueberries" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-arrow"/></svg></a></div>
         </article>
-
         <article class="fruit" data-fruit="3" data-bg="#e2ebcf">
           <p class="fruit__idx">04 / 04</p>
           <h3 class="fruit__name" data-i18n="f3.name">Avocados</h3>
           <p class="fruit__tag" data-i18n="f3.tag">Creamy fruit with the best view on the farm.</p>
           <p class="fruit__desc" data-i18n="f3.desc">Our avocado trees crown the very top of the hill. Use a picking pole to reach the high fruit, then let them ripen on your kitchen counter for a few days.</p>
           <dl class="fruit__meta">
+            <div><dt data-i18n="meta.shop">Order online</dt><dd data-i18n="f3.shop">From $15 · 5 lb</dd></div>
             <div><dt data-i18n="meta.price">U-Pick price</dt><dd data-i18n="f3.price">Seasonal — weighed at checkout</dd></div>
-            <div><dt data-i18n="meta.where">Where</dt><dd data-i18n="f3.where">Top of the hill</dd></div>
           </dl>
-          <button class="btn btn--ink btn--sm" type="button" data-details="3" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-plus"/></svg></button>
+          <div class="fruit__btns"><button class="btn btn--orange btn--sm" type="button" data-quick-add="avocados" data-opt="5lb" data-magnetic><span data-i18n="meta.add">Add to cart</span><svg class="i"><use href="#i-bag"/></svg></button>
+          <a class="btn btn--ink btn--sm" href="product.html?id=avocados" data-magnetic><span data-i18n="meta.details">Details</span><svg class="i"><use href="#i-arrow"/></svg></a></div>
         </article>
-
         <div class="fruits__dots" role="tablist" aria-label="Fruit">
           <button type="button" class="is-active" data-goto="0" aria-label="Tango Tangerines"></button>
           <button type="button" data-goto="1" aria-label="Meyer Lemons"></button>
@@ -209,310 +163,141 @@
   </div>
 </section>
 
-<!-- ============================================================ U-PICK -->
-<section class="upick panel panel--dark" id="upick">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow eyebrow--light"><span class="num">03</span><span data-i18n="upick.eyebrow">U-Pick</span></p>
-      <h2 class="h2" data-split data-i18n="upick.title">How U-Pick <em>works</em></h2>
-      <p class="lead" data-reveal data-i18n="upick.lead">Three easy steps between you and a bag full of sunshine. Open every Saturday and Sunday of the season.</p>
-    </div>
-
-    <ol class="steps">
-      <li class="step" data-reveal data-tilt>
-        <span class="step__n">1</span>
-        <svg class="step__ico"><use href="#i-cal"/></svg>
-        <h3 data-i18n="upick.s1t">Reserve</h3>
-        <p data-i18n="upick.s1p">Book your weekend visit with the form below, by phone, or on WeChat so we can plan the day.</p>
-      </li>
-      <li class="step" data-reveal data-tilt>
-        <span class="step__n">2</span>
-        <svg class="step__ico"><use href="#i-basket"/></svg>
-        <h3 data-i18n="upick.s2t">Pick</h3>
-        <p data-i18n="upick.s2p">Grab a bag and a picking pole, then roam: tangerines everywhere, lemons by the parking lot, blueberries on the far side, avocados up top.</p>
-      </li>
-      <li class="step" data-reveal data-tilt>
-        <span class="step__n">3</span>
-        <svg class="step__ico"><use href="#i-scale"/></svg>
-        <h3 data-i18n="upick.s3t">Weigh &amp; pay</h3>
-        <p data-i18n="upick.s3p">Bring your haul to the scale and pay by the pound. We accept cash, Zelle and Venmo.</p>
-      </li>
-    </ol>
-
-    <div class="board">
-      <div class="board__prices" data-reveal>
-        <h3 class="board__title" data-i18n="price.title">Prices</h3>
-        <ul class="price-list">
-          <li><span data-i18n="price.entry">Entry ticket</span><i></i><strong data-i18n="price.entryV">$10 / person</strong></li>
-          <li><span data-i18n="f0.name">Tango Tangerines</span><i></i><strong data-i18n="f0.price">$2.50 / lb</strong></li>
-          <li><span data-i18n="f1.name">Meyer Lemons</span><i></i><strong data-i18n="f1.price">$1.50 / lb</strong></li>
-          <li><span data-i18n="price.other">Blueberries &amp; avocados</span><i></i><strong data-i18n="price.otherV">Seasonal</strong></li>
-        </ul>
-        <p class="fine" data-i18n="price.note">Prices can change with the harvest — please confirm when you book. Payment: cash, Zelle or Venmo.</p>
-      </div>
-      <div class="board__hours" data-reveal>
-        <div class="hours-card">
-          <p class="hours-card__label" data-i18n="hours.season">2026 season</p>
-          <p class="hours-card__big" data-i18n="hours.dates">Apr 18 – Oct 31</p>
-          <div class="hours-card__row"><svg class="i"><use href="#i-cal"/></svg><span data-i18n="hours.days">Saturdays &amp; Sundays</span></div>
-          <div class="hours-card__row"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="hours.time">10:00 am – 2:00 pm</span></div>
-          <div class="hours-card__status" id="openStatus"></div>
-          <a href="#book" class="btn btn--orange" data-magnetic><span data-i18n="nav.book">Book U-Pick</span><svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ VISIT -->
-<section class="visit panel panel--cream" id="visit">
+<!-- ============================================================ EXPLORE (what the farm offers) -->
+<section class="panel panel--cream explore" data-scene-out>
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="eyebrow"><span class="num">04</span><span data-i18n="visit.eyebrow">Plan your visit</span></p>
-        <h2 class="h2" data-split data-i18n="visit.title">A morning in <em>the grove.</em></h2>
+        <p class="eyebrow"><span class="num">03</span><span data-i18n="home.exEyebrow">Visit, shop &amp; celebrate</span></p>
+        <h2 class="h2" data-split data-i18n="home.exTitle">Everything at <em>Sunmist.</em></h2>
       </div>
-      <p class="lead" data-reveal data-i18n="visit.lead">About 1.5 hours southeast of Los Angeles and less than ten minutes from Old Town Temecula. There are no strict routes — wander anywhere on the property.</p>
+      <p class="lead" data-reveal data-i18n="home.exLead">A perfect place for U-Pick, fresh fruit, wholesale, weddings and every kind of event — plus a private orchard villa to stay the night.</p>
     </div>
-
-    <div class="visit__grid">
-      <div class="card checklist" data-reveal>
-        <h3 data-i18n="visit.bringT">What to bring</h3>
-        <p class="fine" data-i18n="visit.bringHint">Tap to tick them off before you leave home.</p>
-        <ul id="checklist">
-          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b1">Sun hat, sunscreen &amp; sunglasses</span></label></li>
-          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b2">Closed-toe shoes with good tread</span></label></li>
-          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b3">Gloves &amp; small garden clippers</span></label></li>
-          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b4">Water, lunch &amp; a picnic blanket</span></label></li>
-          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b5">Cash, Zelle or Venmo</span></label></li>
-        </ul>
-        <div class="checklist__done" data-i18n="visit.done">You're ready to pick! 🍊</div>
-      </div>
-
-      <div class="visit__facts">
-        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-basket"/></svg><h4 data-i18n="visit.f1t">Bags &amp; poles provided</h4><p data-i18n="visit.f1p">We supply bags and long picking poles for the fruit up high.</p></div>
-        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-leaf"/></svg><h4 data-i18n="visit.f2t">Picnics welcome</h4><p data-i18n="visit.f2p">Bring lunch and a blanket and stay a while under the trees.</p></div>
-        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-mountain"/></svg><h4 data-i18n="visit.f3t">Hiking trails</h4><p data-i18n="visit.f3p">Easy-to-moderate trails wind over the slopes with views across the valley and groves.</p></div>
-        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-sun"/></svg><h4 data-i18n="visit.f4t">Come early</h4><p data-i18n="visit.f4p">Mornings are cooler and the trees are fullest. Gates close at 2pm.</p></div>
-      </div>
-
-      <div class="card map" data-reveal>
-        <div class="map__frame">
-          <iframe title="Map: 26700 Avenida Del Oro, Temecula" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?q=26700%20Avenida%20Del%20Oro%2C%20Temecula%2C%20CA%2092590&t=k&z=14&output=embed"></iframe>
-        </div>
-        <div class="map__info">
-          <div>
-            <p class="map__label" data-i18n="visit.addr">Address</p>
-            <p class="map__addr">26700 Avenida Del Oro<br>Temecula, CA 92590</p>
-          </div>
-          <a class="btn btn--ink btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=26700+Avenida+Del+Oro,+Temecula,+CA+92590" data-magnetic><span data-i18n="visit.dir">Directions</span><svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </div>
+    <div class="tiles">
+      <a class="tile tile--orange" href="u-pick.html" data-reveal data-tilt>
+        <img src="assets/img/fruit-tangerine.png" alt="" loading="lazy">
+        <span class="tile__kicker" data-i18n="home.t1k">Every weekend · $10 entry</span>
+        <h3 data-i18n="nav.upick">U-Pick</h3><p data-i18n="home.t1p">Pick Tango tangerines, Meyer lemons, blueberries and avocados yourself.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tile tile--lemon" href="shop.html" data-reveal data-tilt>
+        <img src="assets/img/fruit-lemon.png" alt="" loading="lazy">
+        <span class="tile__kicker" data-i18n="home.t2k">Order online</span>
+        <h3 data-i18n="nav.shop">Shop</h3><p data-i18n="home.t2p">Buy tangerines, lemons, blueberries and avocados — pick up or ship.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tile tile--blush tile--wide" href="weddings.html" data-reveal data-tilt>
+        <svg class="tile__art" viewBox="0 0 200 160" aria-hidden="true"><use href="#art-arch"/></svg>
+        <span class="tile__kicker" data-i18n="home.t3k">From $4,000 · up to 1,000 guests</span>
+        <h3 data-i18n="nav.weddings">Weddings</h3><p data-i18n="home.t3p">An elegant outdoor venue between thousands of lemon and tangerine trees.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tile tile--berry" href="events.html" data-reveal data-tilt>
+        <img src="assets/img/fruit-blueberries.png" alt="" loading="lazy">
+        <span class="tile__kicker" data-i18n="home.t4k">From $2,000</span>
+        <h3 data-i18n="nav.events">Special Events</h3><p data-i18n="home.t4p">Birthdays, reunions, retreats and parties on our 35-acre plantation.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tile tile--night" href="airbnb.html" data-reveal data-tilt>
+        <svg class="tile__art" viewBox="0 0 200 160" aria-hidden="true"><use href="#art-cabin"/></svg>
+        <span class="tile__kicker" data-i18n="home.t5k">Book direct · save $200</span>
+        <h3 data-i18n="nav.stay">Airbnb</h3><p data-i18n="home.t5p">A private orchard villa with a stargazing log cabin. Sleeps 8.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="tile tile--green" href="wholesale.html" data-reveal data-tilt>
+        <img src="assets/img/fruit-avocado.png" alt="" loading="lazy">
+        <span class="tile__kicker" data-i18n="home.t6k">By the case or pallet</span>
+        <h3 data-i18n="nav.wholesale">Fruit Wholesale</h3><p data-i18n="home.t6p">Meyer lemons and Tango tangerines for grocers, restaurants and distributors.</p>
+        <span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ STAY -->
-<section class="stay panel panel--night" id="stay">
-  <canvas class="stars" id="stars" aria-hidden="true"></canvas>
-  <div class="wrap stay__grid">
-    <div class="stay__copy">
-      <p class="eyebrow eyebrow--light"><span class="num">05</span><span data-i18n="stay.eyebrow">Farm stay</span></p>
-      <h2 class="h2" data-split data-i18n="stay.title">Sleep in the orchard, <em>wake to citrus.</em></h2>
-      <p class="lead" data-reveal data-i18n="stay.lead">Our private fruit-orchard villa sits in its own secluded valley, with a log cabin made for stargazing. Pick breakfast from the trees.</p>
-      <ul class="stay__specs" data-reveal>
-        <li><strong>4</strong><span data-i18n="stay.bed">bedrooms</span></li>
-        <li><strong>2</strong><span data-i18n="stay.bath">bathrooms</span></li>
-        <li><strong>8</strong><span data-i18n="stay.guests">guests</span></li>
-        <li><strong>1,800</strong><span data-i18n="stay.sqft">sq ft</span></li>
-      </ul>
-      <p class="fine" data-reveal data-i18n="stay.rooms">Master with king bed · two bedrooms with queen and full beds · a children's room with two twins. Extra guests $100 each.</p>
-      <a href="mailto:sales@sunmistfruit.com?subject=Farm%20stay%20enquiry" class="btn btn--orange" data-reveal data-magnetic><span data-i18n="stay.cta">Ask about dates</span><svg class="i"><use href="#i-arrow"/></svg></a>
-    </div>
-    <div class="stay__art" data-reveal aria-hidden="true">
-      <svg viewBox="0 0 420 340" class="cabin">
-        <defs>
-          <linearGradient id="hill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1f3a2a"/><stop offset="1" stop-color="#0c1a12"/></linearGradient>
-          <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffbf6a" stop-opacity=".9"/><stop offset="1" stop-color="#ffbf6a" stop-opacity="0"/></radialGradient>
-        </defs>
-        <circle cx="330" cy="70" r="26" fill="#fff3d6"/><circle cx="342" cy="62" r="24" fill="#152238"/>
-        <path d="M0 250 Q110 180 220 230 T420 210 V340 H0Z" fill="url(#hill)"/>
-        <g class="cabin__trees" fill="#16301f">
-          <circle cx="40" cy="238" r="22"/><circle cx="78" cy="228" r="18"/><circle cx="360" cy="222" r="24"/><circle cx="395" cy="232" r="18"/>
-          <g fill="#ff8a2a"><circle cx="34" cy="232" r="3"/><circle cx="48" cy="244" r="3"/><circle cx="82" cy="222" r="3"/><circle cx="354" cy="214" r="3"/><circle cx="370" cy="228" r="3"/><circle cx="398" cy="226" r="3"/></g>
-        </g>
-        <circle cx="210" cy="215" r="90" fill="url(#glow)" class="cabin__glow"/>
-        <path d="M140 250 V200 L210 150 L280 200 V250Z" fill="#3b2616"/>
-        <path d="M128 204 L210 142 L292 204" stroke="#241509" stroke-width="12" fill="none" stroke-linecap="round"/>
-        <g stroke="#2a1a0d" stroke-width="2" opacity=".6"><path d="M142 214H278M142 226H278M142 238H278"/></g>
-        <rect x="192" y="210" width="36" height="40" rx="3" fill="#ffc46e" class="cabin__win"/>
-        <rect x="152" y="208" width="24" height="20" rx="2" fill="#ffc46e" class="cabin__win"/>
-        <rect x="244" y="208" width="24" height="20" rx="2" fill="#ffc46e" class="cabin__win"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ WEDDINGS -->
-<section class="weddings panel panel--blush" id="weddings">
-  <div class="wrap">
-    <p class="eyebrow"><span class="num">06</span><span data-i18n="wed.eyebrow">Weddings &amp; events</span></p>
-    <h2 class="h2 h2--xl" data-split data-i18n="wed.title">Say “I do” under <em>the citrus.</em></h2>
-    <div class="weddings__grid">
-      <p class="lead" data-reveal data-i18n="wed.lead">An elegant outdoor venue nestled between thousands of Meyer lemon and Tango tangerine trees, with a rustic barn for the celebration and rooms for your guests to stay the night.</p>
-      <ul class="wed-list">
-        <li data-reveal><span class="wed-list__n">i.</span><div><h4 data-i18n="wed.l1t">Ceremony in the rows</h4><p data-i18n="wed.l1p">Walk down an aisle lined with fruit-heavy trees and golden-hour light.</p></div></li>
-        <li data-reveal><span class="wed-list__n">ii.</span><div><h4 data-i18n="wed.l2t">Rustic barn reception</h4><p data-i18n="wed.l2p">Long tables, string lights and a valley view for dinner and dancing.</p></div></li>
-        <li data-reveal><span class="wed-list__n">iii.</span><div><h4 data-i18n="wed.l3t">Stay the weekend</h4><p data-i18n="wed.l3p">Bed-and-breakfast rooms on the property keep family close.</p></div></li>
-        <li data-reveal><span class="wed-list__n">iv.</span><div><h4 data-i18n="wed.l4t">Private events</h4><p data-i18n="wed.l4p">Birthdays, retreats, photo shoots and company picnics are welcome too.</p></div></li>
-      </ul>
-    </div>
-    <a href="mailto:sales@sunmistfruit.com?subject=Wedding%20%2F%20event%20enquiry" class="btn btn--ink btn--lg" data-reveal data-magnetic><span data-i18n="wed.cta">Plan your event</span><svg class="i"><use href="#i-arrow"/></svg></a>
-  </div>
-</section>
-
-<!-- ============================================================ WHOLESALE -->
-<section class="wholesale panel panel--orange" id="wholesale">
-  <div class="wrap wholesale__grid">
+<!-- ============================================================ WEDDINGS FEATURE -->
+<section class="panel panel--blush wedfeature">
+  <div class="wrap wedfeature__grid">
     <div>
-      <p class="eyebrow eyebrow--ink"><span class="num">07</span><span data-i18n="ws.eyebrow">Wholesale</span></p>
-      <h2 class="h2" data-split data-i18n="ws.title">From our grove to <em>your shelf.</em></h2>
-      <p class="lead" data-reveal data-i18n="ws.lead">We grow over a million pounds of Tango tangerines and five million pounds of Meyer lemons every year for grocers, restaurants, juice bars and distributors across California.</p>
-      <ul class="ws-tags" data-reveal>
-        <li data-i18n="ws.t1">By the case</li><li data-i18n="ws.t2">By the pallet</li><li data-i18n="ws.t3">Grocers</li><li data-i18n="ws.t4">Restaurants</li><li data-i18n="ws.t5">Juice bars</li>
+      <p class="eyebrow"><span class="num">04</span><span data-i18n="wed.eyebrow">Weddings &amp; events</span></p>
+      <h2 class="h2 h2--xl" data-split data-i18n="wed.title">Say “I do” under <em>the citrus.</em></h2>
+      <p class="lead" data-reveal data-i18n="home.wedLead">Exchange vows between rows of Meyer lemon and Tango tangerine trees, with views across the Temecula Valley. Tables, chairs, a dressing room, bar, BBQ grill and a wedding arch are all included.</p>
+      <ul class="wedfeature__stats" data-reveal>
+        <li><strong>$4,000</strong><span data-i18n="wed.fromLbl">starting price</span></li>
+        <li><strong>1,000</strong><span data-i18n="wed.guestsLbl">guests for the ceremony</span></li>
+        <li><strong>50,000</strong><span data-i18n="wed.sqftLbl">sq ft of space</span></li>
       </ul>
+      <div class="btn-row" data-reveal>
+        <a href="weddings.html" class="btn btn--ink btn--lg" data-magnetic><span data-i18n="wed.cta">Plan your wedding</span><svg class="i"><use href="#i-arrow"/></svg></a>
+        <a href="events.html" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="nav.events">Special Events</span></a>
+      </div>
     </div>
-    <form class="card form" id="wsForm" data-reveal novalidate>
-      <h3 data-i18n="ws.formT">Request a quote</h3>
-      <div class="form__row">
-        <label class="field"><span data-i18n="form.company">Company</span><input name="company" required autocomplete="organization"></label>
-        <label class="field"><span data-i18n="form.name">Your name</span><input name="name" required autocomplete="name"></label>
-      </div>
-      <div class="form__row">
-        <label class="field"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email"></label>
-        <label class="field"><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
-      </div>
-      <div class="form__row">
-        <label class="field"><span data-i18n="ws.product">Product</span>
-          <select name="product">
-            <option value="Tango Tangerines" data-i18n="f0.name">Tango Tangerines</option>
-            <option value="Meyer Lemons" data-i18n="f1.name">Meyer Lemons</option>
-            <option value="Both" data-i18n="ws.both">Both</option>
-          </select></label>
-        <label class="field"><span data-i18n="ws.qty">Quantity</span><input name="qty" data-i18n-ph="ws.qtyPh" placeholder="e.g. 40 cases / week"></label>
-      </div>
-      <button class="btn btn--ink btn--block" type="submit" data-magnetic><span data-i18n="ws.send">Send enquiry</span><svg class="i"><use href="#i-arrow"/></svg></button>
-      <p class="form__msg" role="status"></p>
-    </form>
+    <div class="wedfeature__art" data-reveal aria-hidden="true"><svg viewBox="0 0 200 160"><use href="#art-arch"/></svg></div>
   </div>
 </section>
 
-<!-- ============================================================ BOOK (fruit falls here) -->
-<section class="book" id="book">
-  <div class="wrap book__grid">
-    <div class="book__copy">
-      <p class="eyebrow"><span class="num">08</span><span data-i18n="book.eyebrow">Reserve</span></p>
-      <h2 class="h2 h2--xl" data-split data-i18n="book.title">Come pick <em>with us.</em></h2>
-      <p class="lead" data-reveal data-i18n="book.lead">Tell us when you're coming and how many pickers to expect. We'll confirm by email or phone.</p>
-      <ul class="contact-list" data-reveal>
-        <li><svg class="i"><use href="#i-phone"/></svg><a href="tel:+16268987800">626-898-7800</a> · <a href="tel:+12258038239">225-803-8239</a></li>
-        <li><svg class="i"><use href="#i-mail"/></svg><a href="mailto:sales@sunmistfruit.com">sales@sunmistfruit.com</a></li>
-        <li class="wechat"><svg class="i"><use href="#i-chat"/></svg><span data-i18n="book.wechat">WeChat reservations welcome</span>
-          <!-- To show your WeChat QR code: save it as assets/img/wechat-qr.png and uncomment the next line -->
-          <!-- <img src="assets/img/wechat-qr.png" alt="WeChat QR code" class="wechat__qr" loading="lazy"> --></li>
-      </ul>
-      <button type="button" class="btn btn--ghost btn--sm shake" id="shake" data-magnetic><span data-i18n="book.shake">Shake the tree</span> 🍊</button>
+<!-- ============================================================ SHOP TEASER -->
+<section class="panel panel--paper">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow"><span class="num">05</span><span data-i18n="shop.eyebrow">Farm shop</span></p>
+        <h2 class="h2" data-split data-i18n="home.shopTitle">Buy fruit <em>straight from us.</em></h2>
+      </div>
+      <div>
+        <p class="lead" data-reveal data-i18n="home.shopLead">Order online and pick up at the farm on any U-Pick weekend, or we'll ship it to you.</p>
+        <a href="shop.html" class="btn btn--ink" data-reveal data-magnetic><span data-i18n="shop.all">See the whole shop</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
-
-    <form class="card form form--book" id="bookForm" novalidate>
-      <h3 data-i18n="book.formT">U-Pick reservation</h3>
-      <div class="form__row">
-        <label class="field"><span data-i18n="form.name">Your name</span><input name="name" required autocomplete="name"></label>
-        <label class="field"><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
-      </div>
-      <label class="field"><span data-i18n="form.email">Email</span><input type="email" name="email" autocomplete="email"></label>
-      <div class="form__row">
-        <label class="field"><span data-i18n="book.date">Date</span><input type="date" name="date" id="bookDate" required min="2026-04-18" max="2026-10-31"></label>
-        <label class="field field--num"><span data-i18n="book.adults">Adults</span><input type="number" name="adults" min="1" max="60" value="2" required></label>
-        <label class="field field--num"><span data-i18n="book.kids">Kids</span><input type="number" name="kids" min="0" max="60" value="0"></label>
-      </div>
-      <p class="date-hint" id="dateHint" aria-live="polite"></p>
-      <fieldset class="chips">
-        <legend data-i18n="book.want">I'd like to pick</legend>
-        <label><input type="checkbox" name="fruit" value="Tango Tangerines" checked><span data-i18n="f0.name">Tango Tangerines</span></label>
-        <label><input type="checkbox" name="fruit" value="Meyer Lemons"><span data-i18n="f1.name">Meyer Lemons</span></label>
-        <label><input type="checkbox" name="fruit" value="Blueberries"><span data-i18n="f2.name">Blueberries</span></label>
-        <label><input type="checkbox" name="fruit" value="Avocados"><span data-i18n="f3.name">Avocados</span></label>
-      </fieldset>
-      <label class="field"><span data-i18n="book.notes">Anything we should know?</span><textarea name="notes" rows="2"></textarea></label>
-      <button class="btn btn--orange btn--block btn--lg" type="submit" data-magnetic><span data-i18n="book.send">Request reservation</span><svg class="i"><use href="#i-arrow"/></svg></button>
-      <p class="form__msg" role="status"></p>
-    </form>
+    <div class="shop-grid" id="shopGrid" data-filter="fruit"></div>
   </div>
 </section>
 
+<!-- ============================================================ U-PICK BAND -->
+<section class="panel panel--dark upband">
+  <div class="wrap upband__grid">
+    <div>
+      <p class="eyebrow eyebrow--light"><span class="num">06</span><span data-i18n="nav.upick">U-Pick</span></p>
+      <h2 class="h2" data-split data-i18n="home.upTitle">Every weekend, <em>April – October.</em></h2>
+      <p class="lead" data-reveal data-i18n="home.upLead">Grab a bag and a picking pole and roam the grove. Entry is $10 per person, kids 2 and under are free, and you pay for the fruit by the pound.</p>
+      <div class="btn-row" data-reveal>
+        <a href="u-pick.html#book" class="btn btn--orange btn--lg" data-magnetic><span data-i18n="up.getTickets">Get tickets</span><svg class="i"><use href="#i-ticket"/></svg></a>
+        <a href="u-pick.html" class="btn btn--light btn--lg" data-magnetic><span data-i18n="home.upMore">How U-Pick works</span></a>
+      </div>
+    </div>
+    <div class="hours-card" data-reveal>
+      <p class="hours-card__label" data-i18n="hours.season">2026 season</p>
+      <p class="hours-card__big" data-i18n="hours.dates">Apr 18 – Oct 31</p>
+      <div class="hours-card__row"><svg class="i"><use href="#i-cal"/></svg><span data-i18n="hours.days">Saturdays &amp; Sundays</span></div>
+      <div class="hours-card__row"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="hours.time">10:00 am – 2:00 pm</span></div>
+      <div class="hours-card__status" data-open-status></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FINALE (fruit falls here) -->
+<section class="book finale" id="book" data-3d data-basket>
+  <div class="wrap finale__inner">
+    <p class="eyebrow"><span class="num">07</span><span data-i18n="book.eyebrow">Reserve</span></p>
+    <h2 class="h2 h2--xl" data-split data-i18n="book.title">Come pick <em>with us.</em></h2>
+    <p class="lead" data-reveal data-i18n="home.finLead">26700 Avenida Del Oro, Temecula — about 1.5 hours from Los Angeles.</p>
+    <div class="btn-row" data-reveal>
+      <a href="u-pick.html#book" class="btn btn--orange btn--lg" data-magnetic><span data-i18n="nav.book">Book U-Pick</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      <a href="contact.html" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="nav.contact">Contact</span></a>
+      <button type="button" class="btn btn--ghost btn--lg shake" data-shake data-magnetic><span data-i18n="book.shake">Shake the tree</span> 🍊</button>
+    </div>
+  </div>
+</section>
 </main>
 
-<!-- ============================================================ FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <div>
-        <p class="footer__label" data-i18n="foot.visit">Visit</p>
-        <p>26700 Avenida Del Oro<br>Temecula, CA 92590</p>
-      </div>
-      <div>
-        <p class="footer__label" data-i18n="foot.hours">U-Pick hours</p>
-        <p data-i18n="foot.hoursV">Sat &amp; Sun, 10am – 2pm<br>April 18 – October 31</p>
-      </div>
-      <div>
-        <p class="footer__label" data-i18n="foot.contact">Contact</p>
-        <p><a href="tel:+16268987800">626-898-7800</a><br><a href="tel:+12258038239">225-803-8239</a><br><a href="mailto:sales@sunmistfruit.com">sales@sunmistfruit.com</a></p>
-      </div>
-      <div>
-        <p class="footer__label" data-i18n="foot.follow">Follow</p>
-        <p><a href="https://x.com/sunmistfruit" target="_blank" rel="noopener">X / @sunmistfruit</a><br><button type="button" class="linklike" data-setlang="zh">中文版</button> · <button type="button" class="linklike" data-setlang="en">English</button></p>
-      </div>
-    </div>
-    <div class="footer__word" aria-hidden="true">Sunmist</div>
-    <div class="footer__bottom">
-      <p>© <span id="year">2026</span> Sunmist Fruit</p>
-      <p data-i18n="foot.made">Grown in Temecula, California</p>
-      <a href="#top" class="linklike" data-i18n="foot.top">Back to top ↑</a>
-    </div>
-  </div>
-</footer>
-
-<!-- ============================================================ FRUIT DETAILS DIALOG -->
-<dialog class="details" id="details" aria-labelledby="detailsTitle">
-  <button class="details__close" type="button" aria-label="Close" data-close>×</button>
-  <div class="details__body" id="detailsBody"></div>
-</dialog>
-
-<!-- ============================================================ ICONS -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
-  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.7l1.4 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.4v2.7a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></g></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M9.5 4C5.4 4 2.5 6.6 2.5 9.8c0 1.8.9 3.3 2.4 4.4L4.3 17l3-1.6c.7.2 1.4.3 2.2.3"/><path d="M15 9c3.6 0 6.5 2.3 6.5 5.2 0 1.5-.8 2.9-2 3.8l.5 2.3-2.6-1.3c-.8.2-1.6.4-2.4.4-3.6 0-6.5-2.3-6.5-5.2S11.4 9 15 9z"/></g></symbol>
-  <symbol id="i-basket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 10h18l-2 9a2 2 0 0 1-2 1.5H7A2 2 0 0 1 5 19z"/><path d="M8 10l3-6M16 10l-3-6M9 14v3M15 14v3M12 14v3"/></g></symbol>
-  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z"/></g></symbol>
-  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C4 11 9 5 20 4c0 11-6 16-15 15z"/><path d="M5 19l8-8"/></g></symbol>
-  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2 20l7-12 4 6 3-4 6 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-</svg>
+<div id="site-footer"></div>
 
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="assets/js/scene.js"></script>
 <script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/store.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

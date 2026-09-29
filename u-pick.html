@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>U-Pick — Sunmist Fruit</title>
+  <meta name="description" content="U-Pick every weekend, April – October: Tango tangerines, Meyer lemons, blueberries and avocados. $10 entry, kids 2 and under free.">
+  <meta name="theme-color" content="#ff7417">
+  <meta property="og:title" content="U-Pick — Sunmist Fruit">
+  <meta property="og:description" content="U-Pick every weekend, April – October: Tango tangerines, Meyer lemons, blueberries and avocados. $10 entry, kids 2 and under free.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // pick the language before first paint so there is no flash of the wrong one
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), s = null;
+      try { s = localStorage.getItem('sunmist-lang'); } catch (e) {}
+      var l = q || s || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+      document.documentElement.setAttribute('data-lang', l === 'zh' ? 'zh' : 'en');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body data-page="upick" data-scene="page" data-fruit="0" data-anchor="0.5,-0.02,1.1" data-anchor-mobile="0,0.5,0.8" data-title-zh="自助采摘 — Sunmist 果园" data-desc-zh="4月至10月每个周末开放自助采摘：Tango 蜜橘、梅尔柠檬、蓝莓和牛油果。门票 $10，2 岁及以下儿童免费。">
+<!-- Generated from a shared template: header, menu, footer and cart come from assets/js/layout.js -->
+<canvas id="orchard" class="orchard" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="site-header"></div>
+
+<main id="top">
+<section class="phero" data-3d>
+  <div class="wrap phero__inner">
+    <p class="eyebrow" data-hero><span class="dot"></span><span data-i18n="up.eyebrow">U-Pick · Temecula, California</span></p>
+    <h1 class="phero__title" data-split data-intro data-i18n="up.title">Pick your own <em>sunshine.</em></h1>
+    <p class="lead" data-hero data-i18n="up.lead">Every weekend from April to October, the grove is yours: Tango tangerines, Meyer lemons, blueberries and avocados, straight from the trees.</p>
+    <div class="btn-row" data-hero>
+      <a href="#book" class="btn btn--orange btn--lg" data-magnetic><span data-i18n="up.getTickets">Get tickets</span><svg class="i"><use href="#i-ticket"/></svg></a>
+      <a href="#prices" class="btn btn--ghost btn--lg" data-magnetic><span data-i18n="price.title">Prices</span></a>
+    </div>
+    <ul class="hero__chips" data-hero>
+      <li><svg class="i"><use href="#i-clock"/></svg><span data-i18n="hero.chip1">Sat &amp; Sun · 10am – 2pm</span></li>
+      <li><svg class="i"><use href="#i-cal"/></svg><span data-i18n="hero.chip2">Apr 18 – Oct 31, 2026</span></li>
+      <li><svg class="i"><use href="#i-ticket"/></svg><span data-i18n="up.chipEntry">$10 entry · 2 &amp; under free</span></li>
+    </ul>
+    <p class="status-pill" data-hero data-open-status></p>
+  </div>
+</section>
+
+<section class="upick panel panel--dark" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--light"><span class="num">01</span><span data-i18n="upick.eyebrow">U-Pick</span></p>
+      <h2 class="h2" data-split data-i18n="upick.title">How U-Pick <em>works</em></h2>
+      <p class="lead" data-reveal data-i18n="upick.lead">Three easy steps between you and a bag full of sunshine. Open every Saturday and Sunday of the season.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal data-tilt><span class="step__n">1</span><svg class="step__ico"><use href="#i-ticket"/></svg>
+        <h3 data-i18n="upick.s1t">Reserve</h3><p data-i18n="upick.s1p">Buy your entry tickets below, or RSVP by email, phone or WeChat so we can plan the day.</p></li>
+      <li class="step" data-reveal data-tilt><span class="step__n">2</span><svg class="step__ico"><use href="#i-basket"/></svg>
+        <h3 data-i18n="upick.s2t">Pick</h3><p data-i18n="upick.s2p">Grab a bag and a picking pole, then roam: tangerines everywhere, lemons by the parking lot, blueberries on the far side, avocados up top.</p></li>
+      <li class="step" data-reveal data-tilt><span class="step__n">3</span><svg class="step__ico"><use href="#i-scale"/></svg>
+        <h3 data-i18n="upick.s3t">Weigh &amp; pay</h3><p data-i18n="upick.s3p">Bring your haul to the scale and pay by the pound. We accept cash, Zelle and Venmo.</p></li>
+    </ol>
+
+    <div class="board" id="prices">
+      <div class="board__prices" data-reveal>
+        <h3 class="board__title" data-i18n="price.title">Prices</h3>
+        <ul class="price-list">
+          <li><span data-i18n="price.entry">Entry ticket</span><i></i><strong data-i18n="price.entryV">$10 / person</strong></li>
+          <li><span data-i18n="price.kids">Kids 2 &amp; under</span><i></i><strong data-i18n="price.free">Free</strong></li>
+          <li><span data-i18n="price.redbag">Red bag (holds 10 lb of tangerines)</span><i></i><strong>$25</strong></li>
+          <li><span data-i18n="f0.name">Tango Tangerines</span><i></i><strong data-i18n="f0.price">$2.50 / lb</strong></li>
+          <li><span data-i18n="f1.name">Meyer Lemons</span><i></i><strong data-i18n="f1.price">$1.50 / lb</strong></li>
+          <li><span data-i18n="price.other">Blueberries &amp; avocados</span><i></i><strong data-i18n="price.otherV">Seasonal</strong></li>
+        </ul>
+        <p class="fine" data-i18n="price.note">Prices can change with the harvest — please confirm when you book. Payment: cash, Zelle or Venmo.</p>
+      </div>
+      <div class="board__hours" data-reveal>
+        <div class="hours-card">
+          <p class="hours-card__label" data-i18n="hours.season">2026 season</p>
+          <p class="hours-card__big" data-i18n="hours.dates">Apr 18 – Oct 31</p>
+          <div class="hours-card__row"><svg class="i"><use href="#i-cal"/></svg><span data-i18n="hours.days">Saturdays &amp; Sundays</span></div>
+          <div class="hours-card__row"><svg class="i"><use href="#i-clock"/></svg><span data-i18n="hours.time">10:00 am – 2:00 pm</span></div>
+          <div class="hours-card__status" data-open-status></div>
+          <a href="#book" class="btn btn--ink" data-magnetic><span data-i18n="up.getTickets">Get tickets</span><svg class="i"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel panel--paper">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow"><span class="num">02</span><span data-i18n="fruits.eyebrow">What's growing</span></p>
+        <h2 class="h2" data-split data-i18n="up.whereTitle">Where to find <em>each fruit.</em></h2>
+      </div>
+      <p class="lead" data-reveal data-i18n="up.whereLead">Availability changes week to week with the harvest — ask when you book and we'll tell you what's ripest.</p>
+    </div>
+    <div class="minis">
+      <a class="mini" href="product.html?id=tangerines" data-reveal data-tilt style="--pbg:#ffe7c7"><img src="assets/img/fruit-tangerine.png" alt="" loading="lazy"><h3 data-i18n="f0.name">Tango Tangerines</h3><p data-i18n="f0.where">All across the grove</p><strong data-i18n="f0.price">$2.50 / lb</strong></a>
+      <a class="mini" href="product.html?id=lemons" data-reveal data-tilt style="--pbg:#fff3b8"><img src="assets/img/fruit-lemon.png" alt="" loading="lazy"><h3 data-i18n="f1.name">Meyer Lemons</h3><p data-i18n="f1.where">Rows in front of the parking lot</p><strong data-i18n="f1.price">$1.50 / lb</strong></a>
+      <a class="mini" href="product.html?id=blueberries" data-reveal data-tilt style="--pbg:#e3e4f6"><img src="assets/img/fruit-blueberries.png" alt="" loading="lazy"><h3 data-i18n="f2.name">Blueberries</h3><p data-i18n="f2.where">Far side of the grove</p><strong data-i18n="price.otherV">Seasonal</strong></a>
+      <a class="mini" href="product.html?id=avocados" data-reveal data-tilt style="--pbg:#e2ebcf"><img src="assets/img/fruit-avocado.png" alt="" loading="lazy"><h3 data-i18n="f3.name">Avocados</h3><p data-i18n="f3.where">Top of the hill</p><strong data-i18n="price.otherV">Seasonal</strong></a>
+    </div>
+  </div>
+</section>
+
+<section class="visit panel panel--cream" id="visit">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow"><span class="num">03</span><span data-i18n="visit.eyebrow">Plan your visit</span></p>
+        <h2 class="h2" data-split data-i18n="visit.title">A morning in <em>the grove.</em></h2>
+      </div>
+      <p class="lead" data-reveal data-i18n="visit.lead">About 1.5 hours southeast of Los Angeles and less than ten minutes from Old Town Temecula. There are no strict routes — wander anywhere on the property.</p>
+    </div>
+    <div class="visit__grid">
+      <div class="card checklist" data-reveal>
+        <h3 data-i18n="visit.bringT">What to bring</h3>
+        <p class="fine" data-i18n="visit.bringHint">Tap to tick them off before you leave home.</p>
+        <ul id="checklist">
+          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b1">Sun hat, sunscreen &amp; sunglasses</span></label></li>
+          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b2">Closed-toe shoes with good tread</span></label></li>
+          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b3">Gloves &amp; small garden clippers</span></label></li>
+          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b4">Water, lunch &amp; a picnic blanket</span></label></li>
+          <li><label><input type="checkbox"><span class="box"></span><span data-i18n="visit.b5">Cash, Zelle or Venmo</span></label></li>
+        </ul>
+        <div class="checklist__done" data-i18n="visit.done">You're ready to pick! 🍊</div>
+      </div>
+      <div class="visit__facts">
+        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-basket"/></svg><h4 data-i18n="visit.f1t">Bags &amp; poles provided</h4><p data-i18n="visit.f1p">We supply bags and long picking poles for the fruit up high.</p></div>
+        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-leaf"/></svg><h4 data-i18n="visit.f2t">Picnics welcome</h4><p data-i18n="visit.f2p">Bring lunch and a blanket and stay a while under the trees.</p></div>
+        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-mountain"/></svg><h4 data-i18n="visit.f3t">Hiking trails</h4><p data-i18n="visit.f3p">Easy-to-moderate trails wind over the slopes with views across the valley and groves.</p></div>
+        <div class="fact" data-reveal data-tilt><svg class="i"><use href="#i-sun"/></svg><h4 data-i18n="visit.f4t">Come early</h4><p data-i18n="visit.f4p">Mornings are cooler and the trees are fullest. Gates close at 2pm.</p></div>
+      </div>
+      <div class="card map" data-reveal>
+        <div class="map__frame"><iframe title="Map: 26700 Avenida Del Oro, Temecula" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=26700%20Avenida%20Del%20Oro%2C%20Temecula%2C%20CA%2092590&t=k&z=14&output=embed"></iframe></div>
+        <div class="map__info">
+          <div><p class="map__label" data-i18n="visit.addr">Address</p><p class="map__addr">26700 Avenida Del Oro<br>Temecula, CA 92590</p></div>
+          <a class="btn btn--ink btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=26700+Avenida+Del+Oro,+Temecula,+CA+92590" data-magnetic><span data-i18n="visit.dir">Directions</span><svg class="i"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book" data-3d data-basket>
+  <div class="wrap book__grid">
+    <div class="book__copy">
+      <p class="eyebrow"><span class="num">04</span><span data-i18n="book.eyebrow">Reserve</span></p>
+      <h2 class="h2 h2--xl" data-split data-i18n="book.title">Come pick <em>with us.</em></h2>
+      <p class="lead" data-reveal data-i18n="up.bookLead">Buy entry tickets and red bags online, or RSVP by email so we know how many pickers to expect.</p>
+      <ul class="contact-list" data-reveal>
+        <li><svg class="i"><use href="#i-phone"/></svg><a href="tel:+16268987800">626-898-7800</a> · <a href="tel:+12258038239">225-803-8239</a></li>
+        <li><svg class="i"><use href="#i-mail"/></svg><a href="mailto:sales@sunmistfruit.com">sales@sunmistfruit.com</a></li>
+        <li class="wechat"><svg class="i"><use href="#i-chat"/></svg><span data-i18n="book.wechat">WeChat reservations welcome</span>
+          <!-- To show your WeChat QR code: save it as assets/img/wechat-qr.png and uncomment the next line -->
+          <!-- <img src="assets/img/wechat-qr.png" alt="WeChat QR code" class="wechat__qr" loading="lazy"> --></li>
+      </ul>
+      <button type="button" class="btn btn--ghost btn--sm shake" data-shake data-magnetic><span data-i18n="book.shake">Shake the tree</span> 🍊</button>
+    </div>
+
+    <div class="card form form--book booktabs">
+      <div class="booktabs__nav" role="tablist">
+        <input type="radio" name="booktab" id="bt1" checked><label for="bt1" data-i18n="up.tabTickets">Buy tickets</label>
+        <input type="radio" name="booktab" id="bt2"><label for="bt2" data-i18n="up.tabRsvp">RSVP by email</label>
+      </div>
+
+      <form class="booktabs__pane form" id="ticketForm" novalidate>
+        <h3 data-i18n="up.ticketsT">U-Pick tickets</h3>
+        <label class="field"><span data-i18n="book.date">Date</span><input type="date" name="date" data-upick-date="#tixHint" required></label>
+        <p class="date-hint" id="tixHint" aria-live="polite"></p>
+        <div class="form__row">
+          <label class="field field--num"><span data-i18n="up.adults">Adults ($10)</span><input type="number" name="adults" min="0" max="60" value="2"></label>
+          <label class="field field--num"><span data-i18n="up.kids">Kids 3+ ($10)</span><input type="number" name="kids" min="0" max="60" value="0"></label>
+          <label class="field field--num"><span data-i18n="up.bags">Red bags ($25)</span><input type="number" name="bags" min="0" max="20" value="0"></label>
+        </div>
+        <p class="fine" data-i18n="up.infants">Kids 2 and under are free — no ticket needed.</p>
+        <div class="ticket-total"><span data-i18n="up.total">Total</span><strong id="ticketTotal">$20.00</strong></div>
+        <button class="btn btn--orange btn--block btn--lg" type="submit" data-magnetic><span data-i18n="up.addTickets">Add to cart</span><svg class="i"><use href="#i-bag"/></svg></button>
+      </form>
+
+      <form class="booktabs__pane form" id="bookForm" data-mailform="upick" data-drop novalidate>
+        <h3 data-i18n="book.formT">U-Pick reservation</h3>
+        <div class="form__row">
+          <label class="field"><span data-i18n="form.name">Your name</span><input name="name" required autocomplete="name"></label>
+          <label class="field"><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
+        </div>
+        <label class="field"><span data-i18n="form.email">Email</span><input type="email" name="email" autocomplete="email"></label>
+        <div class="form__row">
+          <label class="field"><span data-i18n="book.date">Date</span><input type="date" name="date" data-upick-date="#dateHint" required></label>
+          <label class="field field--num"><span data-i18n="book.adults">Adults</span><input type="number" name="adults" min="1" max="60" value="2" required></label>
+          <label class="field field--num"><span data-i18n="book.kids">Kids</span><input type="number" name="kids" min="0" max="60" value="0"></label>
+        </div>
+        <p class="date-hint" id="dateHint" aria-live="polite"></p>
+        <fieldset class="chips">
+          <legend data-i18n="book.want">I'd like to pick</legend>
+          <label><input type="checkbox" name="fruit" value="Tango Tangerines" checked><span data-i18n="f0.name">Tango Tangerines</span></label>
+          <label><input type="checkbox" name="fruit" value="Meyer Lemons"><span data-i18n="f1.name">Meyer Lemons</span></label>
+          <label><input type="checkbox" name="fruit" value="Blueberries"><span data-i18n="f2.name">Blueberries</span></label>
+          <label><input type="checkbox" name="fruit" value="Avocados"><span data-i18n="f3.name">Avocados</span></label>
+        </fieldset>
+        <label class="field"><span data-i18n="book.notes">Anything we should know?</span><textarea name="notes" rows="2"></textarea></label>
+        <button class="btn btn--orange btn--block btn--lg" type="submit" data-magnetic><span data-i18n="book.send">Request reservation</span><svg class="i"><use href="#i-arrow"/></svg></button>
+        <p class="form__msg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/scene.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

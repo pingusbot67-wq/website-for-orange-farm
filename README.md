@@ -1,54 +1,49 @@
 # Sunmist Fruit — website
 
-A one-page website for Sunmist Fruit, a U-Pick tangerine and Meyer lemon farm in Temecula, California. It has 3D scroll animation and a full English / 中文 language switch.
+The Sunmist Fruit website (U-Pick, fruit shop, weddings, events, orchard villa and wholesale in Temecula, California), rebuilt with 3D fruit, scroll animation and a full English / 中文 switch.
 
-## What's on the page
+## Pages
 
-| Section | What it does |
+| Page | What's on it |
 |---|---|
-| **Hero** | A 3D Tango tangerine floats beside the headline, follows the cursor, and spins faster when you flick the mouse. |
-| **Our grove** | As you scroll, the tangerine splits open and sprays juice to show its segments. Animated stats: 20,000+ trees, 5M lbs lemons, 1M lbs tangerines. |
-| **Our fruit** | A pinned section. As you scroll, the fruit changes from tangerine to Meyer lemon, then blueberries, then avocado. Each fruit has a **Details** pop-up covering taste, picking tips, how to enjoy it, and price. |
-| **U-Pick** | The three steps, the price board, and season and hours. A live badge says whether the farm is open right now or when the next U-Pick day is (Pacific time). |
-| **Visit** | A "what to bring" checklist that remembers ticks, facts (bags and poles, picnics, trails), a Google Map, and directions. |
-| **Farm stay** | The orchard villa and stargazing cabin, over an animated night sky. |
-| **Weddings & events** | The venue pitch and an enquiry button. |
-| **Wholesale** | A quote-request form. |
-| **Book** | The U-Pick reservation form. Fruit tumbles down and piles up behind it (visitors can push it around with the cursor, or press "Shake the tree"). |
+| `index.html` — Home | A 3D tangerine that splits open as you scroll, then turns into a lemon, blueberries and avocado (each with **Add to cart**). Then links to every part of the farm, a weddings feature, a shop preview, U-Pick hours with a live "open now" badge, and a fruit pile you can push around. |
+| `u-pick.html` — U-Pick | How it works, prices (entry, red bag, fruit per lb), where each fruit grows, what to bring, map, and booking: **buy tickets and red bags** (weekend dates in season only), or **RSVP by email**. |
+| `shop.html` — Shop | Every product with sizes, quantity and **Add to cart**. Filter by fresh fruit or U-Pick. |
+| `product.html?id=…` — Product | 3D fruit, sizes, price, quantity, **Add to cart / Buy now**, then tabs for About, Taste, How to pick and How to enjoy. |
+| `checkout.html` — Checkout | Contact details, pickup (with date) or shipping, and payment choice (Zelle / Venmo / cash). |
+| `weddings.html` — Weddings | Price from $4,000, capacity, the venue, what's included, packages, how the day runs, FAQ and an enquiry form. |
+| `events.html` — Special Events | Price from $2,000, event ideas, amenities and an enquiry form. |
+| `airbnb.html` — Airbnb | The orchard villa and stargazing cabin, rooms, book-direct $200 saving and a booking request form. |
+| `wholesale.html` — Fruit Wholesale | Volumes, products and a quote form. |
+| `about.html` / `contact.html` | The farm's story, plus contact details, a message form and a map. |
 
-The forms don't need a server. Submitting one checks the fields, including that the date is a weekend in season, then opens the visitor's email app with a message to `sales@sunmistfruit.com` already written.
+Every page shares one header: a top bar (phone, email, hours, **EN / 中文**), then the logo, the menu with a **Shop** dropdown, the cart and **Book U-Pick**. Each menu link opens its own page with a short orange page transition.
 
-## Language
+## How orders and forms work
 
-The **EN / 中文** button in the header switches every piece of text, including form messages, the pop-ups and dates. The choice is remembered. You can also link straight to a language with `?lang=zh` or `?lang=en`. Chinese-language browsers get Chinese automatically.
+There is no server. The cart is saved in the visitor's browser. **Place order** and every enquiry form open the visitor's email app with a message to `sales@sunmistfruit.com` already filled in (items, sizes, dates, totals, pickup or shipping). The farm then replies to confirm and sends payment details. Nothing is charged on the website.
 
-- English text lives in `index.html`.
-- Chinese text lives in `assets/js/i18n.js`, under the same `data-i18n` key.
+To take card payments later, the easiest route is a Stripe or Square payment link per product, or moving the catalogue into Shopify or WooCommerce.
 
-## Updating things each season
+## Editing
 
-- **Season dates and hours:** the `SITE` block at the top of `assets/js/main.js` (these drive the open badge and the booking checks), plus the wording in `index.html` and `assets/js/i18n.js`.
-- **Prices:** search for `$2.50`, `$1.50` and `$10` in `index.html` and `assets/js/i18n.js`.
-- **WeChat QR code:** save it as `assets/img/wechat-qr.png`, then uncomment the `<img>` line near "WeChat reservations welcome" in `index.html`.
+- **Products and prices:** `PRODUCTS` at the top of `assets/js/store.js`. The shop, product pages, cart and checkout all read from it. ⚠️ Blueberry and avocado prices are placeholders: please confirm them.
+- **Season dates and hours:** `SITE` at the top of `assets/js/main.js` and `SEASON` in `assets/js/store.js`. Also update the wording in the pages.
+- **Menu and footer:** `assets/js/layout.js`.
+- **Chinese text:** `assets/js/i18n.js`. Each `data-i18n="key"` in the HTML has a Chinese line under the same key.
+- **WeChat QR code:** save it as `assets/img/wechat-qr.png`, then uncomment the `<img>` line near "WeChat reservations welcome" in `u-pick.html` and `contact.html`.
+- **Product photos:** `assets/img/fruit-*.png` are renders of the 3D fruit. Real photos can replace them under the same names.
 
 ## Running it
 
-It's a static site: upload the folder to any web host (GitHub Pages, Netlify, cPanel and so on). To preview it locally:
+It's a static site: upload the folder to any host (GitHub Pages, Netlify, cPanel and so on), or preview it locally:
 
 ```bash
-npm run serve        # or: python3 -m http.server
+python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
-The 3D scene is written in `src/scene.js` and bundled into `assets/js/scene.js`. After you edit the scene:
+The 3D scene source is `src/scene.js`. After editing it, run `npm install && npm run build` to rebuild `assets/js/scene.js`.
 
-```bash
-npm install
-npm run build
-```
+## Built with
 
-## How it's built
-
-- **Three.js** for the 3D fruit. Every peel texture, the cut-open segments (a custom shader), the leaves and the lighting are generated in code, so there are no 3D model or image files.
-- **GSAP + ScrollTrigger** for the scroll animation, and **Lenis** for smooth scrolling. All are vendored in `assets/vendor/`, so no CDN is needed.
-- Fonts: Bricolage Grotesque and Instrument Serif are self-hosted (SIL OFL). Noto Sans SC loads from Google Fonts for Chinese, with PingFang and Microsoft YaHei as fallbacks.
-- Visitors who have reduced motion turned on, or whose device has no WebGL, get a lighter CSS version with the same content.
+Three.js (3D, with every texture generated in code), GSAP + ScrollTrigger and Lenis (all vendored in `assets/vendor/`), and self-hosted Bricolage Grotesque and Instrument Serif (SIL OFL) plus Noto Sans SC for Chinese. Visitors with reduced motion turned on, or without WebGL, get a lighter version with the same content.

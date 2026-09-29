@@ -287,10 +287,20 @@ function buildEnvironment(renderer) {
 
 /* ------------------------------------------------------------------ scene */
 
-export function createScene(canvas, { onReady } = {}) {
+/**
+ * opts.mode    'home'  — full scroll choreography (index page)
+ *              'page'  — one fruit pinned into the page hero, scrolls away with it
+ * opts.fruit   0 tangerine · 1 lemon · 2 blueberries · 3 avocado · null = none
+ * opts.anchor  { x, y, s } position in half-viewport units (x: -1…1, y: -1…1) and scale
+ * opts.floaters / opts.motes  false to hide background fruit / sun motes
+ * opts.still   true for a fixed, unspinning pose (used to render product images)
+ */
+export function createScene(canvas, opts = {}) {
+  const { onReady } = opts;
+  const mode = opts.mode || 'home';
   let renderer;
   try {
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance', preserveDrawingBuffer: !!opts.still });
   } catch (e) {
     return null;
   }
@@ -553,13 +563,21 @@ export function createScene(canvas, { onReady } = {}) {
     camera.position.x = pointer.x * 0.22; camera.position.y = pointer.y * 0.14; camera.lookAt(0, 0, 0);
 
     const L = layout();
-    const { story, fruits, out } = state;
+    const { story, out } = state;
+    const fruits = mode === 'page' ? (opts.fruit == null ? 0 : (opts.fruit + 0.5) / 4) : state.fruits;
+    const scrollWorld = state.scrollY / window.innerHeight * Hh;
 
     /* main fruit placement */
     const move = easeInOut(clamp(story / 0.42));
-    const tx = lerp(L.hero.x, L.story.x, move);
-    const ty = lerp(L.hero.y, L.story.y, move) + out * Hh * 0.35 + Math.sin(time * 1.1) * 0.06;
-    const ts = lerp(L.hero.s, L.story.s, move) * (1 - state.heroOut * 0.08);
+    let tx = lerp(L.hero.x, L.story.x, move);
+    let ty = lerp(L.hero.y, L.story.y, move) + out * Hh * 0.35 + Math.sin(time * 1.1) * 0.06;
+    let ts = lerp(L.hero.s, L.story.s, move) * (1 - state.heroOut * 0.08);
+    if (mode === 'page') {
+      const a = (L.mobile && opts.anchorMobile) || opts.anchor || { x: 0.45, y: 0, s: 1 };
+      tx = a.x * W / 2;
+      ty = a.y * Hh / 2 + scrollWorld + (opts.still ? 0 : Math.sin(time * 1.1) * 0.06);
+      ts = a.s * (L.mobile ? Math.min(W * 0.26, 0.95) : Math.min(1.5, W * 0.13));
+    }
     cur.x = damp(cur.x, tx, 6, dt); cur.y = damp(cur.y, ty, 6, dt); cur.s = damp(cur.s, ts, 6, dt);
     hero.position.set(cur.x, cur.y, 0); hero.scale.setScalar(cur.s);
 
@@ -569,13 +587,13 @@ export function createScene(canvas, { onReady } = {}) {
 
     // spin: free while whole, eases back to face the camera while split open
     pointer.vx *= Math.exp(-2.5 * dt);
-    spinVel = 0.35 + pointer.vx * 8;
+    spinVel = opts.still ? 0 : 0.35 + pointer.vx * 8;
     spin += dt * spinVel * (1 - S);
     const target = Math.round(spin / (Math.PI * 2)) * Math.PI * 2;
     spin = lerp(spin, target, clamp(S * dt * 5));
 
-    cur.rx = damp(cur.rx, -pointer.y * 0.35, 3, dt);
-    cur.rz = damp(cur.rz, pointer.x * 0.18, 3, dt);
+    cur.rx = opts.still ? 0 : damp(cur.rx, -pointer.y * 0.35, 3, dt);
+    cur.rz = opts.still ? 0 : damp(cur.rz, pointer.x * 0.18, 3, dt);
 
     /* per-fruit show/hide during the fruits chapter */
     const f = fruits * 4;
@@ -612,7 +630,6 @@ export function createScene(canvas, { onReady } = {}) {
     faceMat.uniforms.uTime.value = time;
 
     /* floaters */
-    const scrollWorld = state.scrollY / window.innerHeight * Hh;
     floaters.forEach((fl) => {
       const depth = (fl.z + 10) / 6;
       const span = Hh * 2.2;
@@ -623,7 +640,9 @@ export function createScene(canvas, { onReady } = {}) {
       setInstance(fl.im, fl.i, x, y, fl.z, shown ? fl.s : 0.0001, fl.r.z, fl.r.x, fl.r.y);
     });
     for (const im of new Set(floaters.map((f) => f.im))) im.instanceMatrix.needsUpdate = true;
-    floatGroup.visible = hero.visible = state.out < 0.999;
+    floatGroup.visible = opts.floaters !== false && state.out < 0.999;
+    hero.visible = mode === 'page' ? opts.fruit != null && scrollWorld < Hh * 1.6 : state.out < 0.999;
+    motes.visible = opts.motes !== false;
 
     /* motes */
     const pa = moteGeo.attributes.position.array;

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Checkout — Sunmist Fruit</title>
+  <meta name="description" content="Complete your Sunmist Fruit order.">
+  <meta name="theme-color" content="#ff7417">
+  <meta property="og:title" content="Checkout — Sunmist Fruit">
+  <meta property="og:description" content="Complete your Sunmist Fruit order.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // pick the language before first paint so there is no flash of the wrong one
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), s = null;
+      try { s = localStorage.getItem('sunmist-lang'); } catch (e) {}
+      var l = q || s || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+      document.documentElement.setAttribute('data-lang', l === 'zh' ? 'zh' : 'en');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body data-page="shop"  data-title-zh="结账 — Sunmist 果园" data-desc-zh="完成您的 Sunmist 果园订单。">
+<!-- Generated from a shared template: header, menu, footer and cart come from assets/js/layout.js -->
+
+<div class="grain" aria-hidden="true"></div>
+<div id="site-header"></div>
+
+<main id="top">
+<section class="page-top">
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a><span>/</span><a href="shop.html" data-i18n="nav.shop">Shop</a><span>/</span><span data-i18n="co.title">Checkout</span></nav>
+    <h1 class="h2" data-split data-intro data-i18n="co.title">Checkout</h1>
+  </div>
+</section>
+
+<section class="panel panel--paper co-panel">
+  <div class="wrap">
+    <div class="co-empty" id="coEmpty" hidden>
+      <img src="assets/img/fruit-tangerine.png" alt="">
+      <p class="lead" data-i18n="co.empty">Your cart is empty — let's fix that.</p>
+      <a href="shop.html" class="btn btn--orange btn--lg"><span data-i18n="home.shopBtn">Shop fruit</span><svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="co-done card" id="coDone" hidden>
+      <div class="co-done__tick"><svg class="i"><use href="#i-check"/></svg></div>
+      <h2 class="h3" id="coDoneTitle"></h2>
+      <p id="coDoneText"></p>
+      <div class="btn-row"><a href="index.html" class="btn btn--ink"><span data-i18n="nav.home">Home</span></a><a href="u-pick.html" class="btn btn--ghost"><span data-i18n="nav.upick">U-Pick</span></a></div>
+    </div>
+
+    <form class="co-grid" id="checkout" novalidate hidden>
+      <div class="co-main">
+        <div class="card form">
+          <h3><span class="co-step">1</span><span data-i18n="co.contact">Your details</span></h3>
+          <div class="form__row">
+            <label class="field"><span data-i18n="form.name">Your name</span><input name="name" required autocomplete="name"></label>
+            <label class="field"><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
+          </div>
+          <label class="field"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email"></label>
+        </div>
+
+        <div class="card form">
+          <h3><span class="co-step">2</span><span data-i18n="co.fulfil">Pickup or delivery</span></h3>
+          <fieldset class="radios">
+            <legend data-i18n="co.fulfilL">How would you like your order?</legend>
+            <label class="radio"><input type="radio" name="fulfil" value="pickup" checked><span><strong data-i18n="co.pickup">Pick up at the farm</strong><small data-i18n="co.pickupS">Sat &amp; Sun, 10am – 2pm · free</small></span></label>
+            <label class="radio"><input type="radio" name="fulfil" value="ship"><span><strong data-i18n="co.ship">Ship to me</strong><small data-i18n="co.shipS">We'll email the shipping cost to confirm</small></span></label>
+          </fieldset>
+          <label class="field" id="coPickup"><span data-i18n="co.pickupDate">Pickup day</span><input type="date" name="pickupDate" data-upick-date="#coHint"></label>
+          <p class="date-hint" id="coHint" aria-live="polite"></p>
+          <div id="coAddress" hidden>
+            <label class="field"><span data-i18n="co.address">Street address</span><input name="address" required autocomplete="street-address"></label>
+            <div class="form__row">
+              <label class="field"><span data-i18n="co.city">City</span><input name="city" required autocomplete="address-level2"></label>
+              <label class="field"><span data-i18n="co.zip">ZIP code</span><input name="zip" required autocomplete="postal-code"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card form">
+          <h3><span class="co-step">3</span><span data-i18n="co.pay">Payment</span></h3>
+          <fieldset class="radios radios--row">
+            <legend data-i18n="co.payL">How would you like to pay?</legend>
+            <label class="radio"><input type="radio" name="pay" value="zelle" checked><span><strong>Zelle</strong></span></label>
+            <label class="radio"><input type="radio" name="pay" value="venmo"><span><strong>Venmo</strong></span></label>
+            <label class="radio"><input type="radio" name="pay" value="cash"><span><strong data-i18n="co.cash">Cash at pickup</strong></span></label>
+          </fieldset>
+          <p class="fine" data-i18n="co.payNote">We confirm every order personally, then send payment details. Nothing is charged online.</p>
+          <label class="field"><span data-i18n="book.notes">Anything we should know?</span><textarea name="notes" rows="2"></textarea></label>
+        </div>
+      </div>
+
+      <aside class="co-side">
+        <div class="card co-summary">
+          <h3 data-i18n="co.summary">Order summary</h3>
+          <div id="coSummary"></div>
+          <div class="co-rows">
+            <div><span data-i18n="cart.subtotal">Subtotal</span><strong id="coSubtotal">$0.00</strong></div>
+            <div id="coShipRow" hidden><span data-i18n="co.shipping">Shipping</span><span data-i18n="co.shippingV">Quoted after we confirm</span></div>
+            <div class="co-rows__total"><span data-i18n="co.total">Total</span><strong id="coTotal">$0.00</strong></div>
+          </div>
+          <button class="btn btn--orange btn--block btn--lg" type="submit" data-magnetic><span data-i18n="co.place">Place order</span><svg class="i"><use href="#i-arrow"/></svg></button>
+          <p class="form__msg" role="status"></p>
+          <a href="shop.html" class="linklike co-back" data-i18n="cart.continue">Continue shopping</a>
+        </div>
+      </aside>
+    </form>
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

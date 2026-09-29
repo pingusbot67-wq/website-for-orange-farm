@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About Us — Sunmist Fruit</title>
+  <meta name="description" content="Sunmist Fruit is a family plantation in Temecula, California: 100+ acres, 20,000 Meyer lemon trees and a million pounds of Tango tangerines a year.">
+  <meta name="theme-color" content="#ff7417">
+  <meta property="og:title" content="About Us — Sunmist Fruit">
+  <meta property="og:description" content="Sunmist Fruit is a family plantation in Temecula, California: 100+ acres, 20,000 Meyer lemon trees and a million pounds of Tango tangerines a year.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // pick the language before first paint so there is no flash of the wrong one
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), s = null;
+      try { s = localStorage.getItem('sunmist-lang'); } catch (e) {}
+      var l = q || s || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+      document.documentElement.setAttribute('data-lang', l === 'zh' ? 'zh' : 'en');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body data-page="about" data-scene="page" data-fruit="0" data-anchor="0.52,0,1.1" data-anchor-mobile="0,0.5,0.8" data-title-zh="关于我们 — Sunmist 果园" data-desc-zh="Sunmist 果园位于加州 Temecula，占地逾 100 英亩，拥有两万多棵梅尔柠檬树，年产逾百万磅 Tango 蜜橘。">
+<!-- Generated from a shared template: header, menu, footer and cart come from assets/js/layout.js -->
+<canvas id="orchard" class="orchard" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="site-header"></div>
+
+<main id="top">
+<section class="phero" data-3d>
+  <div class="wrap phero__inner">
+    <p class="eyebrow" data-hero><span class="dot"></span><span data-i18n="ab.eyebrow">About us</span></p>
+    <h1 class="phero__title" data-split data-intro data-i18n="story.title">A family orchard, grown on <em>sun &amp; mist.</em></h1>
+    <p class="lead" data-hero data-i18n="ab.lead">Sunmist Fruit is a thriving plantation in Temecula, California — over 100 acres across four farm locations, and one of the bigger fresh-fruit farms in the valley.</p>
+  </div>
+</section>
+
+<section class="panel panel--paper">
+  <div class="wrap about__grid">
+    <div class="about__copy">
+      <p class="lead" data-reveal data-i18n="story.p1">Tucked into a private valley in the De Luz hills, Sunmist Fruit is a working farm. Warm days and cool coastal mist give our citrus its signature sweetness — the same fruit we ship across California is waiting on the trees for you.</p>
+      <p data-reveal data-i18n="ab.p2">The unique micro-climate of the Temecula Valley brings ample sun and a bountiful, nearly year-round harvest. We are home to more than 20,000 Meyer lemon trees producing almost five million pounds a year, plus over a million pounds of sweet, juicy Tango tangerines.</p>
+      <p data-reveal data-i18n="ab.p3">Our aim is simple: grow and ship the tastiest, highest-quality fruit — and share the farm with you. Sunmist is a place for U-Pick, fruit wholesale, weddings and all kinds of events.</p>
+    </div>
+    <div class="stats">
+      <div class="stat" data-reveal><strong><span data-count="100">100</span>+</strong><span data-i18n="story.s4b">acres across 4 farms</span></div>
+      <div class="stat" data-reveal><strong><span data-count="20000">20,000</span>+</strong><span data-i18n="story.s1">Meyer lemon trees</span></div>
+      <div class="stat" data-reveal><strong><span data-count="5" data-count-zh="500">5</span><span data-i18n="unit.m">M</span></strong><span data-i18n="story.s2">lbs of lemons a year</span></div>
+      <div class="stat" data-reveal><strong><span data-count="1" data-count-zh="100">1</span><span data-i18n="unit.m">M</span></strong><span data-i18n="story.s3">lbs of Tango tangerines a year</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel panel--cream">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">01</span><span data-i18n="ab.doE">What we do</span></p>
+      <h2 class="h2" data-split data-i18n="ab.doT">One farm, <em>many ways in.</em></h2>
+    </div>
+    <div class="tiles tiles--4">
+      <a class="tile tile--orange" href="u-pick.html" data-reveal data-tilt><h3 data-i18n="nav.upick">U-Pick</h3><p data-i18n="home.t1p">Pick Tango tangerines, Meyer lemons, blueberries and avocados yourself.</p><span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="tile tile--green" href="wholesale.html" data-reveal data-tilt><h3 data-i18n="nav.wholesale">Fruit Wholesale</h3><p data-i18n="home.t6p">Meyer lemons and Tango tangerines for grocers, restaurants and distributors.</p><span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="tile tile--blush" href="weddings.html" data-reveal data-tilt><h3 data-i18n="nav.weddings">Weddings</h3><p data-i18n="home.t3p">An elegant outdoor venue between thousands of lemon and tangerine trees.</p><span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="tile tile--night" href="airbnb.html" data-reveal data-tilt><h3 data-i18n="nav.stay">Airbnb</h3><p data-i18n="home.t5p">A private orchard villa with a stargazing log cabin. Sleeps 8.</p><span class="tile__go"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/scene.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
