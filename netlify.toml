@@ -1,0 +1,15 @@
+# Netlify settings — a plain static site, nothing to build.
+[build]
+  publish = "."
+  command = ""
+
+# Fonts, vendored libraries and fruit images rarely change: let browsers cache them.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
